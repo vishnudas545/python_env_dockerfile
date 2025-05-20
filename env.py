@@ -9,6 +9,6 @@ def home():
 
 if __name__ == '__main__':
     app_port = os.getenv("APP_PORT",8000)
-    message = os.getenv("MESSAGE",None)
+    message = os.getenv("MESSAGE",this is for git commit change)
 
     app.run(host="0.0.0.0",port=app_port)
