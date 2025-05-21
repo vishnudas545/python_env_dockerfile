@@ -1,0 +1,7 @@
+  python3 env.py 
+  docker build -t flaskapp:3 .
+  docker images
+  docker run -d --name flaskappp -p 80:8000 flaskapp:3
+  docker exec flaskappp ps aux
+  docker exec flaskappp ls -la
+

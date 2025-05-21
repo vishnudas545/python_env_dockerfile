@@ -1,0 +1,12 @@
+FROM alpine:3.18
+RUN apk update && apk add --no-cache python3 && apk add py3-pip
+ENV APP_ROOT /var/scripts/app/
+ENV APP_PORT 8000
+RUN mkdir -p "$APP_ROOT"
+WORKDIR "$APP_ROOT"
+COPY . .
+RUN  pip3 install -r requirements.txt
+EXPOSE 8000
+CMD ["env.py"]
+ENTRYPOINT ["/usr/bin/python3"]
+
